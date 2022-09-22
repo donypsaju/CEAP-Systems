@@ -61,7 +61,7 @@ function formSubmition(){
     /*Sl No.*/cell1.innerHTML = slNo;
     /*Abbr*/cell2.innerHTML = abbr;
     /*name and address*/cell3.innerHTML = nameAdd;
-    /*DOB*/cell4.innerHTML = formattedToday;
+    /*DOB*/cell4.innerHTML = dobY;
     /*AGE*/cell5.innerHTML = age;
     /*1st Appo*/cell6.innerHTML = firstAppointment;
     /*Total Serv*/cell7.innerHTML = localStorage.getItem("dob");
@@ -69,6 +69,5 @@ function formSubmition(){
     /*Qualifications*/cell9.innerHTML = qualification;
     /*Date and time*/cell10.innerHTML = new Date();
     /*Action*/cell11.innerHTML = "<div class=\"btn-group\" role=\"group\" aria-label=\"Basic example\"><button type=\"button\" class=\"btn btn-warning\">Edit <i class=\"fa-solid fa-pen-to-square\"></i></button><button type=\"button\" class=\"btn btn-danger\">Delete <i class=\"fa-solid fa-trash\"></i></button></div>";
-
 };
 
