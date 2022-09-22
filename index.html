@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CEAP Info System</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="bg-primary">
+    
+      <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">CEAP Info System</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/database/lists.html">List</a>
+              </li>
+          </div>
+        </div>
+      </nav>
+    <div class="container-fluid">
+      <div class="form container-fluid">
+        <div class="mb-3">
+          <label for="nameAddress" class="form-label"
+            >Name and Address</label
+          >
+          <input
+            class="form-control"
+            list="datalistOptions"
+            id="nameAddress"
+            placeholder="Type to search..."
+          />
+          <datalist id="datalistOptions">
+            <option value="Trial"></option>
+          </datalist>
+        </div>
+        
+        <div class="mb-3">
+          <label for="designation" class="form-label"
+            >Designation</label
+          >
+          <input
+            class="form-control"
+            list="datalistOptionsDesig"
+            id="designation"
+            placeholder="Type to search..."
+          />
+          <datalist id="datalistOptionsDesig">
+            <option value="UPST"></option>
+            <option value="LPST"></option>
+            <option value="Non Teaching"></option>
+            <option value="Physical Education"></option>
+            <option value="Music"></option>
+            <option value="Sewing"></option>
+          </datalist>
+        </div>
+        <div class="mb-3">
+          <label for="gender">Gender</label>
+          <select class="form-select" name="gender" aria-label="Default select example">
+            <option selected disabled>Select any one</option>
+            <option value="1">Male</option>
+            <option value="2">Female</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="dateofBirth" class="form-label">Date of Birth</label>
+          <input type="date" class="form-control" id="dateofBirth">
+        </div>
+        <div class="mb-3">
+          <label for="firstAppo" class="form-label">First Appointment</label>
+          <input type="date" class="form-control" id="firstAppo">
+        </div>
+
+        <div class="mb-3">
+          <label for="currAppoFrom" class="form-label">Current Appointment from date</label>
+          <input type="date" class="form-control" id="currAppoFrom">
+          <label for="currAppoTo" class="form-label">Current Appointment to date</label>
+          <input type="date" class="form-control" id="currAppoTo">
+        </div>
+        <div class="mb-3">
+          <label for="remarks" class="form-label"
+            >Remarks</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="remarks"
+            placeholder="Remarks (if any)"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="qualfications" class="form-label"
+            >Qualfications</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="qualfications"
+            placeholder="Qualfications (seperate with comas)"
+          />
+        </div>
+        <div class="mb-3">
+          <button class="btn btn-info" type="submit" onclick="formSubmition()">Submit</button>
+        </div>
+      </div>
+      <div class="container-fluid lists-embed bg-info">
+        <iframe src="/database/lists.html" width="100%" frameborder="0"></iframe>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js" integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="index.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
