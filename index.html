@@ -35,94 +35,133 @@
         </div>
       </nav>
     <div class="container-fluid">
-      <div class="form container-fluid">
-        <div class="mb-3">
-          <label for="nameAddress" class="form-label"
-            >Name and Address</label
-          >
-          <input
-            class="form-control"
-            list="datalistOptions"
-            id="nameAddress"
-            placeholder="Type to search..."
-          />
-          <datalist id="datalistOptions">
-            <option value="Trial"></option>
-          </datalist>
+      <main>
+        <div class="form container-fluid">
+          <div class="mb-3">
+            <label for="nameAddress" class="form-label"
+              >Name and Address</label
+            >
+            <input
+              class="form-control"
+              list="datalistOptions"
+              id="nameAddress"
+              placeholder="Type to search..."
+            required/>
+            <datalist id="datalistOptions">
+              <option value="Trial"></option>
+            </datalist>
+          </div>
+          
+          <div class="mb-3">
+            <label for="designation" class="form-label"
+              >Designation</label
+            >
+            <input
+              class="form-control"
+              list="datalistOptionsDesig"
+              id="designation"
+              placeholder="Type to search..." required
+            />
+            <datalist id="datalistOptionsDesig">
+              <option value="UPST"></option>
+              <option value="LPST"></option>
+              <option value="Non Teaching"></option>
+              <option value="Physical Education"></option>
+              <option value="Music"></option>
+              <option value="Sewing"></option>
+            </datalist>
+          </div>
+          <div class="mb-3">
+            <label for="gender">Gender</label>
+            <select class="form-select" name="gender" aria-label="Default select example" id="gender_select" required>
+              <option selected disabled>Select any one</option>
+              <option value="1">Male</option>
+              <option value="2">Female</option>
+            </select>
+          </div>
+  
+          <div class="mb-3">
+            <label for="dateofBirth" class="form-label">Date of Birth</label>
+            <input type="date" class="form-control" id="dateofBirth" required>
+          </div>
+          <div class="mb-3">
+            <label for="firstAppo" class="form-label">First Appointment</label>
+            <input type="date" class="form-control" id="firstAppo">
+          </div>
+  
+          <div class="mb-3">
+            <label for="currAppoFrom" class="form-label">Current Appointment from date</label>
+            <input type="date" class="form-control" id="currAppoFrom">
+            <label for="currAppoTo" class="form-label">Current Appointment to date</label>
+            <input type="date" class="form-control" id="currAppoTo">
+          </div>
+          <div class="mb-3">
+            <label for="remarks" class="form-label"
+              >Remarks</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="remarks"
+              placeholder="Remarks (if any)"
+            />
+          </div>
+  
+          <div class="mb-3">
+            <label for="qualfications" class="form-label"
+              >Qualfications</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="qualfications"
+              placeholder="Qualfications (seperate with comas)"
+            />
+          </div>
+          <div class="mb-3">
+            <button class="btn btn-info" type="submit" onclick="formSubmition()">Submit</button>
+          </div>
         </div>
-        
-        <div class="mb-3">
-          <label for="designation" class="form-label"
-            >Designation</label
-          >
-          <input
-            class="form-control"
-            list="datalistOptionsDesig"
-            id="designation"
-            placeholder="Type to search..."
-          />
-          <datalist id="datalistOptionsDesig">
-            <option value="UPST"></option>
-            <option value="LPST"></option>
-            <option value="Non Teaching"></option>
-            <option value="Physical Education"></option>
-            <option value="Music"></option>
-            <option value="Sewing"></option>
-          </datalist>
-        </div>
-        <div class="mb-3">
-          <label for="gender">Gender</label>
-          <select class="form-select" name="gender" aria-label="Default select example">
-            <option selected disabled>Select any one</option>
-            <option value="1">Male</option>
-            <option value="2">Female</option>
-          </select>
-        </div>
-
-        <div class="mb-3">
-          <label for="dateofBirth" class="form-label">Date of Birth</label>
-          <input type="date" class="form-control" id="dateofBirth">
-        </div>
-        <div class="mb-3">
-          <label for="firstAppo" class="form-label">First Appointment</label>
-          <input type="date" class="form-control" id="firstAppo">
-        </div>
-
-        <div class="mb-3">
-          <label for="currAppoFrom" class="form-label">Current Appointment from date</label>
-          <input type="date" class="form-control" id="currAppoFrom">
-          <label for="currAppoTo" class="form-label">Current Appointment to date</label>
-          <input type="date" class="form-control" id="currAppoTo">
-        </div>
-        <div class="mb-3">
-          <label for="remarks" class="form-label"
-            >Remarks</label
-          >
-          <input
-            type="text"
-            class="form-control"
-            id="remarks"
-            placeholder="Remarks (if any)"
-          />
-        </div>
-
-        <div class="mb-3">
-          <label for="qualfications" class="form-label"
-            >Qualfications</label
-          >
-          <input
-            type="text"
-            class="form-control"
-            id="qualfications"
-            placeholder="Qualfications (seperate with comas)"
-          />
-        </div>
-        <div class="mb-3">
-          <button class="btn btn-info" type="submit" onclick="formSubmition()">Submit</button>
-        </div>
-      </div>
+      </main>
+      
       <div class="container-fluid lists-embed bg-info">
-        <iframe src="/database/lists.html" width="100%" frameborder="0"></iframe>
+        <table class="table table-dark table-striped" id="myRecentTable">
+          <thead>
+              <tr>
+                <th scope="col">Sl. No.</th>
+                <th scope="col">Sri./Smt./Sr.</th>
+                <th scope="col">Name & Address</th>
+                <th scope="col">Date of Birth</th>
+                <th scope="col">Age</th>
+                <th scope="col">First Appointment</th>
+                <th scope="col">Total Service</th>
+                <th scope="col">Remarks</th>
+                <th scope="col">Qualifications</th>
+                <th scope="col">Date & Time</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" id="sl_no">1</td>
+                <td id="abbr">Sri.</td>
+                <td id="name_addr">Dony P Saju, Puthumana (H), Anthinad P.O</td>
+                <td id="dob">20-12-1995</td>
+                <td id="age">26</td>
+                <td id="first_appo">01-01-2023</td>
+                <td id="ttl_serv">00-05-23</td>
+                <td id="remarks">Nil</td>
+                <td id="qualifications">Plus Two, TTC, K TET I</td>
+                <td id="time">20-12-1995 01.59 AM</td>
+                <td id="action_btns">
+                  <div class="btn-group" role="group" aria-label="Basic example">
+                      <button type="button" class="btn btn-warning">Edit <i class="fa-solid fa-pen-to-square"></i></button>
+                      <button type="button" class="btn btn-danger">Delete <i class="fa-solid fa-trash"></i></button>
+                    </div>
+                </td>
+              </tr>
+            </tbody>
+        </table>
       </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js" integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
