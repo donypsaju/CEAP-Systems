@@ -37,6 +37,6 @@ table,thead,tbody{
 #myRecentTable{
     border-radius: 5px;
 }
-.empAddForm{
+.form{
     display: none;
 }
